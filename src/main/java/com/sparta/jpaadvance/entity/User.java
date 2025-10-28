@@ -12,13 +12,5 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String username;
-
-    @OneToOne(mappedBy = "user")
-    private Food food;
-
-    public void addFood(Food food) {
-        this.food = food;
-        food.setUser(this);
-    }
+    private String fullName;
 }
